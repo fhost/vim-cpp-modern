@@ -18,7 +18,7 @@ syn keyword cTodo contained BUG NOTE
 " Highlight function names
 if get(g:, 'cpp_function_highlight', 1)
 
-    syn match cUserFunction "\<\h\w*\>\(\s\|\n\)*("me=e-1 contains=cParen,cCppParen
+    syn match cUserFunction "\~\?\<\h\w*\>\(\s\|\n\)*("me=e-1 contains=cParen,cCppParen
     syn match cAngleBrackets "<\(\w\|,\|\s\)*>" contains=cType,cNumber,cppStructure
     syn match cUserTemplateFunction "\<\h\w*\>\(\s\|\n\)*<.*>("me=e-1 contains=cParen,cCppParen,cAngleBrackets
     hi def link cUserFunction Function
